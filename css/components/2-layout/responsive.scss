@@ -1,0 +1,119 @@
+// 1800px
+@include xxxxxlg-xxxxxxlg {
+    html {
+        font-size: 8px;
+    }
+    // @include hero-xxxxxlg-xxxxxxlg;
+}
+// 1450px
+@include xxxxlg-xxxxxlg {
+    html {
+        font-size: 7px;
+    }
+    // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+
+    @include hero-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+    html {
+        font-size: 6px;
+    }
+    @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+    html {
+        font-size: 5.5px;
+    }
+    @include hero-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    html {
+        font-size: 4.5px;
+    }
+    body {
+    }
+    p {
+        &.sm {
+            font-size: 15px;
+        }
+    }
+    @include hero-lg-xlg;
+}
+// 930px
+@include md-lg {
+    html {
+        font-size: 4px;
+    }
+    @include hero-md-lg;
+}
+// 750px
+@include sm-md {
+    html {
+        font-size: 3.5px;
+    }
+    h1 {
+        font-size: 20rem;
+    }
+    @include hero-sm-md;
+}
+// 650px
+@include sm-md-extra {
+    body {
+        font-size: 44px;
+        line-height: 100%
+    }
+    h1 {
+        font-size: 56px;
+        line-height: 50px;
+        letter-spacing: -2px;
+    }
+    @include hero-sm-md-extra;
+    @include contact-sm-md-extra;
+}
+// 540px
+@include xsm-sm  {
+    @include hero-xsm-sm;
+}
+// 440px
+@include xxsm-xsm  {
+    body {
+        font-size: 38px;
+    }
+    h1 {
+        font-size: 44px;
+        line-height: 40px;
+    }
+    @include hero-xxsm-xsm;
+}
+// 380px
+@include xxxsm-xxsm  {
+    body {
+        font-size: 35px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 37px;
+    }
+    // @include hero-xxxsm-xxsm;
+}
+// 330px
+@include xxxxsm-xxxsm  {
+    body {
+        font-size: 32px;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 34px;
+    }
+    // @include hero-xxxsm-xxsm;
+}
+

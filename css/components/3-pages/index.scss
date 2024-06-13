@@ -1,0 +1,292 @@
+.hero {
+  background: #f9f9f9;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  min-height: 100vh;
+  padding: 9rem 0 10rem;
+
+    &-indent {
+      padding-left: 10rem;
+    }
+    &-text {
+      display: flex;
+      align-items: flex-start;
+      margin-left: -1.5rem;
+      padding-left: 10rem;
+      img {
+        width: 17rem;
+        margin: 1.5rem;
+      }
+    }
+    &-tabs {
+      &:last-child {
+        padding-left: 3rem;
+        padding: 35rem 0 0 3rem;
+      }
+    }
+    &-content {
+      width: 55%;
+      &-wrapper {
+        width: 100%;
+        position: relative;
+      }
+      p {
+        span {
+          color: #b8b8b8;
+        }
+      }
+    }
+    &-contact {
+      display: block;
+      color: $black;
+      padding-top: 8rem;
+      &.mob {
+        display: none;
+      }
+      &:hover {
+        opacity: 1;
+        color: $primary;
+      }
+    }
+    .tabBtn {
+      cursor: pointer;
+      color: #b8b8b8;
+      transition: 0.3s ease;
+      &:hover {
+        color: $main;
+      }
+      &.active {
+        color: $main;
+      }
+    }
+  }
+  &Item {
+    &:hover {
+      opacity: 1;
+      .heroItem {
+        &__image {
+          &-wrapper {
+            display: block;
+            animation: fadeIn 0.3s ease;
+            z-index: 2;
+          }
+        }
+      }
+    }
+    &__image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 142%;
+      position: relative;
+      &-wrapper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 45%;
+        max-width: 64rem;
+        display: none;
+        &.active {
+          display: block;
+          animation: fadeIn 0.3s ease;
+          z-index: 1;
+
+        }
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        margin: 0;
+      }
+    }
+  }
+}
+// 1380px
+@mixin hero-xxxlg-xxxxlg {
+  .hero {
+  }
+}
+// 1250px
+@mixin hero-xlg-xxlg-extra {
+  .hero {
+  }
+}
+// 1180px
+@mixin hero-xlg-xxlg {
+  .hero {
+  }
+}
+// 1024px
+@mixin hero-lg-xlg {
+  .hero {
+  }
+}
+// 930px
+@mixin hero-md-lg {
+  .hero {
+  }
+}
+// 750px
+@mixin hero-sm-md {
+  .hero {
+  }
+}
+// 650px
+@mixin hero-sm-md-extra {
+  .hero {
+    &__inner {
+      flex-direction: column;
+    padding: 20px 0;
+      &-content {
+        width: 100%;
+        max-width: unset;
+      }
+      &-indent {
+        padding: 0;
+      }
+      &-text {
+        padding: 0;
+        position: relative;
+        margin: 0;
+        flex-direction: column;
+        & > img {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 112px;
+          margin: 0;
+        }
+      }
+      &-tabs {
+        width: 100%;
+        &:last-child {
+          padding: 16px 0 0 0;
+        }
+        &-top {
+          padding: 12px 0 0 122px;
+          margin-bottom: 20px;
+        }
+      }
+      &-col {
+        width: 100%;
+        max-width: unset;
+        padding-top: 14px;
+        p {
+          display: none;
+        }
+      }
+      &-contact {
+        padding-top: 0;
+        display: none;
+        &.mob {
+          display: block;
+        }
+      }
+      .tabBtn {
+        display: none;
+      }
+    }
+    &Item {
+      margin-bottom: 16px;
+      &:last-of-type {
+        margin: 0;
+      }
+      &__image {
+        &-wrapper {
+          width: 100%;
+          max-width: unset;
+          position: relative;
+          display: block !important;
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin hero-xsm-sm {
+  .hero {
+  }
+}
+// 440px
+@mixin hero-xxsm-xsm {
+  .hero {
+  }
+}
+.contact {
+  background-color: $primary;
+  padding: 46rem 0 4rem;
+  display: none;
+  align-self: flex-end;
+  &.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+
+  }
+  &__inner {
+    &-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 55rem;
+      margin-bottom: 2rem;
+      a {
+        font-size: 5.6rem;
+        position: relative;
+        margin-bottom: 2rem;
+        padding-bottom: 1.3rem;
+        white-space: nowrap;
+        color: $white;
+        &:hover {
+          opacity: 1;
+          color: $main;
+          &::before {
+            background-color: $main;
+          }
+        }
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.5rem;
+          background-color: $white;
+          content: "";
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}
+// 650px
+@mixin contact-sm-md-extra {
+  .contact {
+    padding: 160px 0 20px;
+    &__inner {
+      &-links {
+        max-width: 170px;
+        a {
+          font-size: 18px;
+          line-height: 100%;
+          margin-bottom: 7px;
+          padding-bottom: 4px;
+          &::before {
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+}
